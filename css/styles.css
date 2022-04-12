@@ -42,8 +42,9 @@ table, th, td {
 }
 
 .dot-pulse {
-  top: 50%;
-  bottom: 50%;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   position: relative;
   left: -9999px;
   width: 10px;
