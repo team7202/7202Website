@@ -36,12 +36,9 @@ td {
     text-align: center;
 }
 
-table, th {
-    margin-left: 10px;
-}
-
 table, th, td {
   border: 3px solid white;
+  margin-left: 10px;
 }
 
 .top-left {
