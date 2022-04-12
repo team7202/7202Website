@@ -10,9 +10,25 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <body>
+        <center class="loading-text">Let's rock!</center>
         <center class="center">
             <p class="card-description">Loading...</p>
             <div class="loader"></div>
         </center>
     </body>
+    
+    <script>
+        const header = document.querySelector(".loading-text");
+        const textArray = [
+            "Be a rock!",
+            "You are a rock!",
+            "Am I a rock?",
+            "Are you a rock?",
+            "Maybe we both are rocks :0"
+        ]
+        
+        setInerval(() => {
+           header.innerText = textArray[Math.floor(Math.random() * (textArray.length - 1))] 
+        }, 5000);
+    </script>
 </html>
