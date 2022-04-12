@@ -36,6 +36,10 @@ td {
     text-align: center;
 }
 
+th {
+    margin-left: 10px;
+}
+
 table, th, td {
   border: 3px solid white;
 }
@@ -123,8 +127,6 @@ table, th, td {
     height: 50px;
     top: 50%;
     bottom: 50%;
-/*     margin-left:auto;
-    margin-right:auto; */
     text-align: center;
 }
 
