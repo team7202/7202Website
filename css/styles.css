@@ -34,8 +34,7 @@ header li a {
 
 table, th, td {
   border: 3px solid white;
-  margin-left:auto;
-  margin-right:auto;
+  text-align: center;
 }
 
 .top-left {
