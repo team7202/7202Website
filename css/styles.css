@@ -71,7 +71,7 @@ table, th, td {
 
 .btn-active {
     background-color: orange;
-    color: black;
+    color: bold black;
     border: none;
     padding: 5px;
     font-size: 1.2em;
@@ -81,7 +81,7 @@ table, th, td {
 
 .btn-active:hover {
     background-color: orange;
-    color: black;
+    color: bold black;
     border: none;
     padding: 6px;
     font-size: 1.2em;
