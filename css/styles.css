@@ -154,7 +154,7 @@ table, th, td {
 .card-description {
     color: white;
     border: 3px solid white;
-    width: 10%;
+    width: 5%;
 }
 
 @keyframes shake {
