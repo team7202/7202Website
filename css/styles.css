@@ -43,6 +43,7 @@ table, th, td {
 
 .dot-pulse {
   position: relative;
+  padding: 70px 0;
   left: -9999px;
   width: 10px;
   height: 10px;
