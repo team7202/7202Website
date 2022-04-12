@@ -61,7 +61,7 @@ header li a {
 }
 
 .btn-active {
-    background-color: var(--nav-bg-color);
+    background-color: orange;
     color: black;
     border: none;
     padding: 5px;
@@ -71,7 +71,7 @@ header li a {
 }
 
 .btn-active:hover {
-    background-color: var(--nav-bg-color);
+    background-color: orange;
     color: black;
     border: none;
     padding: 6px;
@@ -81,7 +81,7 @@ header li a {
 }
 
 .btn {
-    background-color: var(--nav-bg-color);
+    background-color: orange;
     color: white;
     border: none;
     padding: 5px;
@@ -91,7 +91,7 @@ header li a {
 }
 
 .btn:hover {
-    background-color: var(--nav-bg-color);
+    background-color: orange;
     color: white;
     border: none;
     padding: 10px;
