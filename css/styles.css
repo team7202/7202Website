@@ -45,41 +45,14 @@ center {
     padding: 250px 0;
 }
 
-.dot-pulse {
-  position: relative;
-  left: -9999px;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-  box-shadow: 9999px 0 0 -5px #9880ff;
-  animation: dotPulse 1.5s infinite linear;
-  animation-delay: .25s;
-}
-
-.dot-pulse::before, .dot-pulse::after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  width: 10px;
-  height: 10px;
-  border-radius: 5px;
-  background-color: #9880ff;
-  color: #9880ff;
-}
-
-.dot-pulse::before {
-  box-shadow: 9984px 0 0 -5px #9880ff;
-  animation: dotPulseBefore 1.5s infinite linear;
-  animation-delay: 0s;
-}
-
-.dot-pulse::after {
-  box-shadow: 10014px 0 0 -5px #9880ff;
-  animation: dotPulseAfter 1.5s infinite linear;
-  animation-delay: .5s;
+.loader {
+  border: 16px solid #f3f3f3;
+  border-radius: 50%;
+  border-top: 16px solid #3498db;
+  width: 120px;
+  height: 120px;
+  -webkit-animation: spin 2s linear infinite; /* Safari */
+  animation: spin 2s linear infinite;
 }
 
 .top-left {
@@ -179,45 +152,6 @@ center {
     color: white;
 }
 
-@keyframes dotPulseBefore {
-  0% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
-  }
-  30% {
-    box-shadow: 9984px 0 0 2px #9880ff;
-  }
-  60%,
-  100% {
-    box-shadow: 9984px 0 0 -5px #9880ff;
-  }
-}
-
-@keyframes dotPulse {
-  0% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
-  }
-  30% {
-    box-shadow: 9999px 0 0 2px #9880ff;
-  }
-  60%,
-  100% {
-    box-shadow: 9999px 0 0 -5px #9880ff;
-  }
-}
-
-@keyframes dotPulseAfter {
-  0% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
-  }
-  30% {
-    box-shadow: 10014px 0 0 2px #9880ff;
-  }
-  60%,
-  100% {
-    box-shadow: 10014px 0 0 -5px #9880ff;
-  }
-}
-
 @keyframes shake {
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -262,4 +196,14 @@ center {
     100% {
         transform: translate(1px, -2px) rotate(-1deg);
     }
+}
+
+@-webkit-keyframes spin {
+  0% { -webkit-transform: rotate(0deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }
