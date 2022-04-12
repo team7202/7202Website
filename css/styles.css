@@ -33,8 +33,7 @@ header li a {
 }
 
 table, th, td {
-  border: 3px solid;
-  outline-color: white
+  border: 3px solid white;
 }
 
 .top-left {
