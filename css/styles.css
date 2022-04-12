@@ -32,9 +32,9 @@ header li a {
     text-decoration: none;
 }
 
-/* td {
+td {
     text-align: center;
-} */
+}
 
 table, th, td {
   border: 3px solid white;
