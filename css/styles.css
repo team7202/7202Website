@@ -32,9 +32,9 @@ header li a {
     text-decoration: none;
 }
 
-td {
+/* td {
     text-align: center;
-}
+} */
 
 table, th, td {
   border: 3px solid white;
@@ -123,8 +123,9 @@ table, th, td {
     height: 50px;
     top: 50%;
     bottom: 50%;
-    margin-left:auto;
-    margin-right:auto;
+/*     margin-left:auto;
+    margin-right:auto; */
+    text-align: center;
 }
 
 .card-image:hover {
