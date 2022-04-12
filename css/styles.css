@@ -43,9 +43,7 @@ table, th, td {
 
 .dot-pulse {
   top: 50%;
-  left: 50%;
-  margin-left: -(X/2)u;
-  margin-top: -(Y/2)u;
+  bottom: 50%;
   position: relative;
   left: -9999px;
   width: 10px;
