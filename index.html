@@ -20,7 +20,7 @@
     </body>
     
     <script>
-//         const header = document.querySelector("loadingText");
+        const header = document.querySelector("loadingText");
         const textArray = [
             "Be a rock!",
             "You are a rock!",
@@ -30,7 +30,7 @@
         ]
         
         setInterval(() => {
-           document.write(textArray[Math.floor(Math.random() * (textArray.length - 1))]); 
+           header.innerText = (textArray[Math.floor(Math.random() * (textArray.length - 1))]); 
         }, 5000);
     </script>
 </html>
