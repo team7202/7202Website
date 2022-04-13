@@ -58,6 +58,12 @@ table, th, td {
   animation: spin 2s linear infinite;
 }
 
+.loading-text {
+    color: white;
+    border: 3px solid white;
+    width: 8%;
+}
+
 .top-left {
     margin-top: auto;
 }
