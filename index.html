@@ -22,7 +22,7 @@
     <script>
         const header = document.querySelector(".loading-text");
         setInterval(() => {
-            fetch("./json/loading-text.json").then((response) => {
+            fetch("json/loading-text.json").then((response) => {
                 return response.json();
             }).then((data) => {
                 header.innerText = data[Math.floor(Math.random() * (textArray.length - 1))];
