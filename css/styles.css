@@ -107,7 +107,8 @@ table, th, td {
     padding: 5px;
     font-size: 1.2em;
     border-radius: 5px;
-    cursor: pointer;
+    border-color: black;
+    cursor: pointer
 }
 
 .btn-active:hover {
@@ -118,6 +119,7 @@ table, th, td {
     padding: 6px;
     font-size: 1.2em;
     border-radius: 5px;
+    border-color: black;
     cursor: pointer;
 }
 
@@ -128,6 +130,7 @@ table, th, td {
     padding: 5px;
     font-size: 1.2em;
     border-radius: 5px;
+    border-color: black;
     cursor: pointer;
 }
 
@@ -138,6 +141,7 @@ table, th, td {
     padding: 10px;
     font-size: 1.2em;
     border-radius: 5px;
+    border-color: black;
     cursor: pointer;
 }
 
