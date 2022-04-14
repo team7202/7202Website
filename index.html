@@ -10,6 +10,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 
     <body>
+        <p class="top-right">Ping: null</p>
         <center>
             <p class="loading-text" style="color: white;">Loading funny loading messages...</p>
         </center>
@@ -20,6 +21,23 @@
     </body>
     
     <script>
+        const pingText = document.querySelector(".top-right");
+        
+        const startTime = new Date();
+        const img = new Image();
+        
+        img.onload = function() {
+            // record end time
+        }
+        
+        img.src = "./img/programming.png";
+        
+        const endTime = new Date();
+        
+        const ping = endTime. getTime() - startTime.getTime();
+        
+        pingText.innerText = `Ping: ${ping}`;     
+        
         const header = document.querySelector(".loading-text");
         setInterval(() => {
                 const textArray = [
