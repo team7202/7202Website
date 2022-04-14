@@ -36,9 +36,15 @@
         
         const ping = endTime. getTime() - startTime.getTime();
         
-        setTimeout(() => {
-            window.location.href = "/home";
-        }, ping * 5);
+        if(ping < 2) {
+            setTimeout(() => {
+                window.location.href = "/home";
+            }, 1 * 5000);
+        } else if(ping > 2) {
+            setTimeout(() => {
+                window.location.href = "/home";
+            }, ping * 5000);
+        }
         
         pingText.innerText = `Ping: ${ping}`;     
         
