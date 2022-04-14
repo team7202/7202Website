@@ -103,11 +103,10 @@ table, th, td {
     background-color: orange;
     font-weight: 700;
     color: black;
-    border: none;
+    border: 2px solid black;;
     padding: 5px;
     font-size: 1.2em;
     border-radius: 5px;
-    border-color: black;
     cursor: pointer
 }
 
@@ -115,7 +114,7 @@ table, th, td {
     background-color: orange;
     font-weight: 700;
     color: bold black;
-    border: none;
+    border: 2px solid black;;
     padding: 6px;
     font-size: 1.2em;
     border-radius: 5px;
@@ -126,7 +125,7 @@ table, th, td {
 .btn {
     background-color: orange;
     color: white;
-    border: none;
+    border: 2px solid black;;
     padding: 5px;
     font-size: 1.2em;
     border-radius: 5px;
@@ -137,7 +136,7 @@ table, th, td {
 .btn:hover {
     background-color: orange;
     color: white;
-    border: none;
+    border: 2px solid black;;
     padding: 10px;
     font-size: 1.2em;
     border-radius: 5px;
