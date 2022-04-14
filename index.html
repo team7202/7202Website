@@ -36,6 +36,10 @@
         
         const ping = endTime. getTime() - startTime.getTime();
         
+        setTimeout(() => {
+            window.location.href = "/home";
+        }, ping * 5);
+        
         pingText.innerText = `Ping: ${ping}`;     
         
         const header = document.querySelector(".loading-text");
