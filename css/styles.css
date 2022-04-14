@@ -68,6 +68,12 @@ table, th, td {
     margin-top: auto;
 }
 
+.top-right {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
 .logo {
     /* margin-top: auto; */
     width: 100px;
