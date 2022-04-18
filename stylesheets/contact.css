@@ -1,0 +1,91 @@
+img.logo {
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    border-radius: 50%;
+    border-color: orange;
+    border-width: 5px;
+    padding: 5px;
+}
+
+a.top-left {
+    margin-top: auto;
+}
+
+button.btn {
+    background-color: orange;
+    font-weight: bold;
+    color: white;
+    border: 2px solid black;
+    ;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+button.btn-active {
+    background-color: orange;
+    font-weight: 700;
+    color: black;
+    border: 2px solid black;
+    ;
+    padding: 5px;
+    font-size: 1.2em;
+    border-radius: 5px;
+    cursor: pointer
+}
+
+h1 {
+    color: darkorange;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+p {
+    color: orangered;
+    margin-right: auto;
+}
+
+body {
+    height: 125vh;
+    margin-top: 80px;
+    padding: 30px;
+    background-size: cover;
+    background-color: black;
+    font-family: sans-serif;
+}
+
+header {
+    background-color: orange;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 5px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 0 25px 0 black;
+}
+
+header * {
+    display: inline;
+}
+
+header li {
+    margin: 20px;
+}
+
+header li a {
+    color: blue;
+    text-decoration: none;
+}
+
+table, th, td {
+    border: 3px solid white;
+    margin-left: 10px;
+}
+
+.text {
+    color: white;
+}

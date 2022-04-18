@@ -1,0 +1,16 @@
+{
+    "title": "Sponsors | Cyber Orioles",
+    "welcome": "Here are the sponsors of the Cyber Orioles!",
+    "images": [
+        {
+            "name": "Ford",
+            "path": "/images/sponsors/ford_logo.png",
+            "url": "https://www.ford.com/"
+        },
+        {
+            "name": "Loc Performance",
+            "path": "/images/sponsors/loc_performance_logo.png",
+            "url": "https://www.locperformance.com/"
+        }
+    ]
+}

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Sponsors</title>
+    <link rel="stylesheet" href="/stylesheets/sponsors.css">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" class="top-left">
+            <img src="/images/logo.png" class="logo" alt="Cyber Orioles Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><button class="btn" type="submit" onclick="onButtonClick('home.html')"
+                        onmouseover="onButtonHover('btn', 0)" onmouseout="onButtonNotHover('btn', 0)">Home</button></li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('about.html')"
+                        onmouseover="onButtonHover('btn', 1)" onmouseout="onButtonNotHover('btn', 1)">About</button>
+                </li>
+                <li><button class="btn-active" type="submit" onclick="onButtonClick('sponsors.html')"
+                        onmouseover="onButtonHover('btn-active', 0)"
+                        onmouseout="onButtonNotHover('btn-active', 0)">Sponsors</button>
+                </li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('past-robots.html')"
+                        onmouseover="onButtonHover('btn', 2)" onmouseout="onButtonNotHover('btn', 2)">Past
+                        Robots</button></li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('contact.html')"
+                        onmouseover="onButtonHover('btn', 3)" onmouseout="onButtonNotHover('btn', 3)">Contact</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <center>
+        <div class="welcome"></div>
+    </center>
+    <center>
+        <div class="sponsors"></div>
+    </center>
+</body>
+
+<script>
+    fetch("json/sponsors.json").then(response => response.json()).then(data => {
+        document.getElementsByClassName("title")[0].innerHTML = data.title;
+        document.getElementsByClassName("welcome")[0].innerHTML = `<h1>${data.welcome}</h1>`;
+
+        for (let i = 0; i < data.images.length; i++) {
+            console.log(data.images[i]);
+            // document.getElementsByClassName("sponsors")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
+            document.getElementsByClassName("sponsors")[0].innerHTML += `<a href="${data.images[i].url}" target="_blank" rel="noopener noreferrer"><img src=${data.images[i].path} class="sponsors-image" alt="${data.images[i].name}'s Logo"></img></a>`
+
+        }
+    });
+
+    function onButtonClick(page) {
+        location = `${page}`;
+    }
+
+    function onButtonHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orangered;");
+    }
+
+    function onButtonNotHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orange;");
+    }
+
+    function onMouseHover(id) {
+        // document.getElementsByClassName(`${id}`)[0].remove();
+        // console.log(id);
+    }
+</script>
+
+</html>

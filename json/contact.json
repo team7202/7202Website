@@ -1,0 +1,29 @@
+{
+    "title": "Contact | Cyber Orioles",
+    "info": [
+        {
+            "name": "Kari Brown",
+            "role": "Coach",
+            "email": "brown@morrice.k12.mi.us",
+            "phone": "+1 517-896-5208"
+        },
+        {
+            "name": "Matt Hammond",
+            "role": "Mentor",
+            "email": "",
+            "phone": "+1 989-666-2020"
+        },
+        {
+            "name": "Ayden",
+            "role": "Mentor",
+            "email": "",
+            "phone": "+1 989-721-7542"
+        },
+        {
+            "name": "Cyber Orioles",
+            "role": "Team",
+            "email": "frc2022team7202@gmail.com",
+            "phone": ""
+        }
+    ]
+}

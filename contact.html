@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Contact</title>
+    <link rel="stylesheet" href="/stylesheets/contact.css">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" class="top-left">
+            <img src="/images/logo.png" class="logo" alt="Cyber Orioles Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><button class="btn" type="submit" onclick="onButtonClick('home.html')"
+                        onmouseover="onButtonHover('btn', 0)" onmouseout="onButtonNotHover('btn', 0)">Home</button></li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('about.html')"
+                        onmouseover="onButtonHover('btn', 1)" onmouseout="onButtonNotHover('btn', 1)">About</button>
+                </li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('sponsors.html')"
+                        onmouseover="onButtonHover('btn', 2)" onmouseout="onButtonNotHover('btn', 2)">Sponsors</button>
+                </li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('past-robots.html')"
+                        onmouseover="onButtonHover('btn', 3)" onmouseout="onButtonNotHover('btn', 3)">Past
+                        Robots</button></li>
+                <li><button class="btn-active" type="submit" onclick="onButtonClick('contact.html')"
+                        onmouseover="onButtonHover('btn-active', 0)"
+                        onmouseout="onButtonNotHover('btn-active', 0)">Contact</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+    <br>
+    <center>
+        <table class="contact-table">
+            <!-- <tr>
+            <th style="color:white;"><strong>Role</strong></th>
+            <th style="color:white;"><strong>Name</strong></th>
+            <th style="color:white;"><strong>Email</strong></th>
+            <th style="color:white;"><strong>Phone Number</strong></th>
+        </tr>
+        <tr>
+            <th style="color:white;">Team Email</th>
+            <th style="color:white;">Cyber Orioles</th>
+            <th style="color:white;"><a
+                    href="https://mail.google.com/mail/u/0/?fs=1&to=frc2022team7202@gmail.com&su=Subject&body=Hello,%20CyberOrioles%0a%0a-%0a%0aFrom:%20&tf=cm">frc2022team7202@gmail.com</a>
+            </th>
+            <th style="color:white;"></th>
+        </tr>
+        <tr>
+            <th style="color:white;">Coach</th>
+            <th style="color:white;">Kari Brown</th>
+            <th style="color:white;"><a href=""></a></th>
+            <th style="color:white;">+1 517-896-5208</th>
+        </tr>
+        <tr>
+            <th style="color:white;">Mentor</th>
+            <th style="color:white;">Matt Hammond</th>
+            <th style="color:white;"><a href=""></a></th>
+            <th style="color:white;">+1 989-666-2020</th>
+        </tr> -->
+            <tr>
+                <th style="color:white;"><strong>Name</strong></th>
+                <th style="color:white;"><strong>Role</strong></th>
+                <th style="color:white;"><strong>Email</strong></th>
+                <th style="color:white;"><strong>Phone Number</strong></th>
+            </tr>
+            <tr>
+                <th style="color:white;">Test</th>
+                <th style="color:white;">Test</th>
+                <th style="color:white;">Test</th>
+                <th style="color:white;"><a href="tele:9894135943">+1 989-413-5943</a></th>
+            </tr>
+            <!-- <tr>
+                <th style="color:white;">
+                    Test
+                </th>
+                <th style="color:white;">
+                    Test
+                </th>
+                <th style="color:white;">
+                    <a
+                        href="https://mail.google.com/mail/u/0/?fs=1&to=<%=contact[index].email%>&su=Subject&body=Hello,%20<%=contact[index].name%>%0a%0a-%0a%0aFrom:%20&tf=cm">
+                        Test
+                    </a>
+                </th>
+                <th style="color:white;">
+                    <a href="tel:<%=contact[index].phoneformat%>">
+                        Test
+                    </a>
+                </th>
+            </tr> -->
+        </table>
+    </center>
+</body>
+
+<script>
+    fetch("json/contact.json").then(response => response.json()).then(data => {
+        document.getElementsByClassName("title")[0].innerHTML = data.title;
+        // document.getElementsByClassName("homepage-welcome")[0].innerHTML = data.welcome;
+
+        for (let i = 0; i < data.info.length; i++) {
+            console.log(data.info[i].phone.replace("+", "").replace(" ", "").replace("-", "").replace("-", ""));
+            // console.log(data.info[i]);
+            document.getElementsByClassName("contact-table")[0].innerHTML += `
+                <tr>
+                    <th class="text">${data.info[i].name}</th>
+                    <th class="text">${data.info[i].role}</th>
+                    <th class="text"><a href="https://mail.google.com/mail/u/0/?fs=1&to=${data.info[i].email}&su=Subject&body=Hello,%20${data.info[i].name}%0a%0a-%0a%0aFrom:%20&tf=cm" target="_blank" rel="noopener noreferrer" class="text">${data.info[i].email}</a></th>
+                    <th class="text"><a href="tel:${data.info[i].phone.replace("+", "").replace(" ", "").replace("-", "").replace("-", "")}">${data.info[i].phone}</th>
+                </tr>
+            `;
+        }
+    });
+
+    function onButtonClick(page) {
+        location = `${page}`;
+    }
+
+    function onButtonHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orangered;");
+    }
+
+    function onButtonNotHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orange;");
+    }
+
+    function onMouseHover(id) {
+        // document.getElementsByClassName(`${id}`)[0].remove();
+        // console.log(id);
+    }
+</script>
+
+</html>

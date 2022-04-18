@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title class="title">Home</title>
+    <link rel="stylesheet" href="/stylesheets/home.css">
+</head>
+
+<body>
+    <header>
+        <a href="/index.html" class="top-left">
+            <img src="/images/logo.png" class="logo" alt="Cyber Orioles Logo">
+        </a>
+        <nav>
+            <ul>
+                <li><button class="btn-active" type="submit" onclick="onButtonClick('home.html')"
+                        onmouseover="onButtonHover('btn-active', 0)"
+                        onmouseout="onButtonNotHover('btn-active', 0)">Home</button></li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('about.html')"
+                        onmouseover="onButtonHover('btn', 0)" onmouseout="onButtonNotHover('btn', 0)">About</button>
+                </li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('sponsors.html')"
+                        onmouseover="onButtonHover('btn', 1)" onmouseout="onButtonNotHover('btn', 1)">Sponsors</button>
+                </li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('past-robots.html')"
+                        onmouseover="onButtonHover('btn', 2)" onmouseout="onButtonNotHover('btn', 2)">Past
+                        Robots</button></li>
+                <li><button class="btn" type="submit" onclick="onButtonClick('contact.html')"
+                        onmouseover="onButtonHover('btn', 3)" onmouseout="onButtonNotHover('btn', 3)">Contact</button>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <h1 class="homepage-welcome"></h1>
+    <div class="descriptions"></div>
+    <br>
+    <center>
+        <h1 class="homepage-welcome">What we do</h1>
+        <table>
+            <tr class="card-image-list">
+                <td class="card"> <img src="/images/programming.png" alt="Programming Image" class="card"
+                        onmouseover="onMouseHover('card')"></td>
+                <td class="card"></td>
+                <td class="card"> <img src="/images/machining.png" alt="Machininig Image" class="card"
+                        onmouseover="onMouseHover('card')"></td>
+                <td class="card"></td>
+                <td class="card"><img src="/images/photography.png" alt="Photography Image" class="card"
+                        onmouseover="onMouseHover('card')"></td>
+            </tr>
+            <tr class="card-description-list">
+                <td class="card-description">
+                    <p class="card-description">Programming</p>
+                </td>
+                <td class="card-description"></td>
+                <td class="card-description">
+                    <p class="card-description">&nbsp;&nbsp;&nbsp;Machining</p>
+                </td>
+                <td class="card-description"></td>
+                <td class="card-description">
+                    <p class="card-description">&nbsp;Photography</p>
+                </td>
+                <!-- <td class="card-description"><p class="card-description"></p></td> -->
+            </tr>
+        </table>
+    </center>
+</body>
+
+<script>
+    fetch("json/home.json").then(response => response.json()).then(data => {
+        document.getElementsByClassName("title")[0].innerHTML = data.title;
+        document.getElementsByClassName("homepage-welcome")[0].innerHTML = data.welcome;
+
+        for (let i = 0; i < data.descriptions.length; i++) {
+            console.log(data.descriptions[i]);
+            document.getElementsByClassName("descriptions")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
+        }
+    });
+
+    function onButtonClick(page) {
+        location = `${page}`;
+    }
+
+    function onButtonHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orangered;");
+    }
+
+    function onButtonNotHover(name, id) {
+        document.getElementsByClassName(name)[id].setAttribute("style", "background-color: orange;");
+    }
+
+    function onMouseHover(id) {
+        // document.getElementsByClassName(`${id}`)[0].remove();
+        // console.log(id);
+    }
+</script>
+
+</html>
