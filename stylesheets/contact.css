@@ -43,16 +43,18 @@ button.btn-active {
     font-size: 1.2em;
     border-radius: 5px;
     cursor: pointer
-}
+} */
 
+/*
 h1 {
     color: darkorange;
     /* margin-top: 50%; */
     margin-bottom: 50%;
     margin-right: auto;
     margin-left: auto;
-}
+} */
 
+/*
 p {
     color: orangered;
     margin-right: auto;
@@ -229,8 +231,9 @@ table, th, td {
     }
 }
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
-@media (min-width:641px)  { 
-    /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
+@media (min-width:641px)  { /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ }
+@media (min-width:961px)  { 
+    /* tablet, landscape iPad, lo-res laptops ands desktops */ 
     img.logo {
         width: 100px;
         height: 100px;
@@ -311,11 +314,6 @@ table, th, td {
         color: white;
     }
 
-    table {
-        border: 1px solid orangered;
-    }
-
-
     body {
         height: 125vh;
         margin-top: 80px;
@@ -359,7 +357,5 @@ table, th, td {
         color: white;
     }
 }
-
-@media (min-width:961px)  { /* tablet, landscape iPad, lo-res laptops ands desktops */ }
 @media (min-width:1025px) { /* big landscape tablets, laptops, and desktops */ }
 @media (min-width:1281px) { /* hi-res laptops and desktops */ }
