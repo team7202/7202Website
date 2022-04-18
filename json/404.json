@@ -1,0 +1,31 @@
+{
+    "messages": [
+        "404 Not Found",
+        "The page you are trying to access does not exist.",
+        "The page you are looking for cannot be found.",
+        "We'd rather you use our home page instead.",
+        "Looks like something went wrong!",
+        "The page you are looking for isn't here. Check your spelling and try again.",
+        "Oops! The page you're looking for has either been moved or doesn't exist.",
+        "What you are looking for isn't here.",
+        "We looked everywhere, but we couldn't find that page.",
+        "The page you are looking for doesn't exist.",
+        "Sorry, the page you are looking for doesn't exist.",
+        "The page you are looking for might have been moved or deleted.",
+        "Unfortunately, the page you are looking for is unavailable.",
+        "This is awkward. You're looking for something that doesn't exist...",
+        "Looks like you found a dead link.",
+        "Sorry, we couldn't find the page you're looking for. But we're working on it!",
+        "The page you are looking for is temporarily unavailable.",
+        "The page you're trying to reach doesn't exist.",
+        "The page you're after doesn't exist.",
+        "The page you're looking for cannot be found.",
+        "You stumbled across a page that doesn't exist.",
+        "Looks like you're lost.",
+        "Page not found, try something else.",
+        "Oh no! The page you're looking for cannot be found.",
+        "Sorry! That page doesn't seem to exist!",
+        "It looks like the page you're looking for has been mislaid.",
+        "The page you're looking for cannot be found. If this is a mistake, please let us know!"
+    ]
+}

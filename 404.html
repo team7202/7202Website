@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title class="title">Sponsors</title>
-    <link rel="stylesheet" href="/stylesheets/sponsors.css">
+    <title class="title">404</title>
+    <link rel="stylesheet" href="/stylesheets/404.css">
 </head>
 
 <body>
@@ -15,48 +15,44 @@
         </a>
         <nav>
             <ul>
-                <li><button class="btn" type="submit" onclick="onButtonClick('home')"
+                <li><button class="btn" type="submit" onclick="onButtonClick('home.html')"
                         onmouseover="onButtonHover('btn', 0)" onmouseout="onButtonNotHover('btn', 0)">Home</button></li>
                 <li><button class="btn" type="submit" onclick="onButtonClick('about')"
                         onmouseover="onButtonHover('btn', 1)" onmouseout="onButtonNotHover('btn', 1)">About</button>
                 </li>
-                <li><button class="btn-active" type="submit" onclick="onButtonClick('sponsors')"
-                        onmouseover="onButtonHover('btn-active', 0)"
-                        onmouseout="onButtonNotHover('btn-active', 0)">Sponsors</button>
+                <li><button class="btn" type="submit" onclick="onButtonClick('sponsors')"
+                        onmouseover="onButtonHover('btn', 2)" onmouseout="onButtonNotHover('btn', 2)">Sponsors</button>
                 </li>
                 <li><button class="btn" type="submit" onclick="onButtonClick('past-robots')"
-                        onmouseover="onButtonHover('btn', 2)" onmouseout="onButtonNotHover('btn', 2)">Past
+                        onmouseover="onButtonHover('btn', 3)" onmouseout="onButtonNotHover('btn', 3)">Past
                         Robots</button></li>
                 <li><button class="btn" type="submit" onclick="onButtonClick('contact')"
-                        onmouseover="onButtonHover('btn', 3)" onmouseout="onButtonNotHover('btn', 3)">Contact</button>
+                        onmouseover="onButtonHover('btn', 4)" onmouseout="onButtonNotHover('btn', 4)">Contact</button>
                 </li>
             </ul>
         </nav>
     </header>
 
     <center>
-        <div class="welcome"></div>
-    </center>
-    <center>
-        <div class="sponsors"></div>
+        <h1>404!</h1>
+        <p class="error"></p>
+        <button class="btn" type="submit" onclick="onBackButtonClick()" onmouseover="onButtonHover('btn', 5)" onmouseout="onButtonNotHover('btn', 5)">Back</button>
     </center>
 </body>
 
 <script>
-    fetch("json/sponsors.json").then(response => response.json()).then(data => {
-        document.getElementsByClassName("title")[0].innerHTML = data.title;
-        document.getElementsByClassName("welcome")[0].innerHTML = `<h1>${data.welcome}</h1>`;
-
-        for (let i = 0; i < data.images.length; i++) {
-            console.log(data.images[i]);
-            // document.getElementsByClassName("sponsors")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
-            document.getElementsByClassName("sponsors")[0].innerHTML += `<a href="${data.images[i].url}" target="_blank" rel="noopener noreferrer"><img src=${data.images[i].path} class="sponsors-image" alt="${data.images[i].name}'s Logo"></img></a>`
-
-        }
-    });
-
+    fetch("json/404.json").then(response => response.json()).then(data => {
+        const index = Math.floor(Math.random() * ((data.messages.length - 1) - 0 + 1) + 0);
+        const randomMessage = data.messages[index]
+        document.getElementsByClassName("error")[0].innerHTML = randomMessage;
+    })
+    
     function onButtonClick(page) {
         location = `${page}`;
+    }
+
+    function onBackButtonClick() {
+        history.back();
     }
 
     function onButtonHover(name, id) {

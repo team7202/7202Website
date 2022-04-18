@@ -38,10 +38,12 @@ button.btn-active {
 
 h1 {
     color: darkorange;
-    /* margin-top: 50%; */
-    margin-bottom: 50%;
     margin-right: auto;
     margin-left: auto;
+    /* position: fixed; */
+    top: 50%;
+    /* margin-top: -100px; */
+    /* margin-left: -200px; */
 }
 
 p {
@@ -81,13 +83,4 @@ header li {
 header li a {
     color: blue;
     text-decoration: none;
-}
-
-table, th, td {
-    border: 3px solid white;
-    margin-left: 10px;
-}
-
-.text {
-    color: white;
 }
