@@ -141,13 +141,13 @@ header li a {
         cursor: pointer
     }
 
-    h1.homepage-welcome {
+    h1 {
         color: darkorange;
         margin-right: auto;
         margin-left: auto;
     }
 
-    p.homepage-description {
+    p {
         color: orangered;
         margin-right: auto;
     }
@@ -263,13 +263,13 @@ header li a {
         cursor: pointer
     }
 
-    h1.homepage-welcome {
+    h1 {
         color: darkorange;
         margin-right: auto;
         margin-left: auto;
     }
 
-    p.homepage-description {
+    p {
         color: orangered;
         margin-right: auto;
     }
