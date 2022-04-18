@@ -36,7 +36,7 @@
 
     button.btn-active {
         background-color: orange;
-        font-weight: 700;
+        font-weight: bold;
         color: black;
         border: 2px solid black;
         padding: 2.5px;
