@@ -7,7 +7,127 @@
     background-color: white;
 }
 
-@media (min-width:320px)  { /* smartphones, iPhone, portrait 480x320 phones */ }
+@media (min-width:320px)  { 
+    /* smartphones, iPhone, portrait 480x320 phones */ 
+    img.logo {
+        width: 50px;
+        height: 50px;
+        background-color: orange;
+        border-radius: 50%;
+        border-color: orange;
+        border-width: 5px;
+        padding: 2.5px;
+    }
+
+    a.top-left {
+        margin-top: auto;
+    }
+
+    button.btn {
+        background-color: orange;
+        font-weight: bold;
+        color: white;
+        border: 2px solid black;
+        padding: 2.5px;
+        font-size: 0.6em;
+        border-radius: 2.5px;
+        cursor: pointer
+    }
+
+    button.btn-active {
+        background-color: orange;
+        font-weight: 700;
+        color: black;
+        border: 2px solid black;
+        padding: 2.5px;
+        font-size: 0.6em;
+        border-radius: 2.5px;
+        cursor: pointer
+    }
+
+    h1.homepage-welcome {
+        color: darkorange;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    p.homepage-description {
+        color: orangered;
+        margin-right: auto;
+    }
+
+    img.card {
+        width: 25%;
+        height: 25%;
+    }
+
+    td.card {
+        width: 50px;
+        height: 50px;
+        top: 50%;
+        bottom: 50%;
+        /* padding: 1px; */
+        text-align: center;
+    }
+
+    td.card-description {
+        width: 25px;
+        height: 25px;
+        /* top: 50%; */
+        /* bottom: 50%; */
+        text-align: center;
+    }
+
+    td {
+        padding: 0.5px;
+    }
+
+    p.card-description {
+        width: 25px;
+        height: 25px;
+        text-align: center;
+        color: white;
+    }
+
+    table {
+        border: 1px solid orangered;
+    }
+
+
+    body {
+        height: 62.5vh;
+        margin-top: 40px;
+        padding: 15px;
+        background-size: cover;
+        background-color: black;
+        font-family: sans-serif;
+    }
+
+    header {
+        background-color: orange;
+        position: fixed;
+        left: 0;
+        right: 0;
+        top: 2.5px;
+        height: 15px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0 0 12.5px 0 black;
+    }
+
+    header * {
+        display: inline;
+    }
+
+    header li {
+        margin: 10px;
+    }
+
+    header li a {
+        color: blue;
+        text-decoration: none;
+    }
+}
 @media (min-width:481px)  { /* portrait e-readers (Nook/Kindle), smaller tablets @ 600 or @ 640 wide. */ }
 @media (min-width:641px)  { 
     /* portrait tablets, portrait iPad, landscape e-readers, landscape 800x480 or 854x480 phones */ 
