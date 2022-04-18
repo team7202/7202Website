@@ -105,7 +105,7 @@
                     <th class="text">${data.info[i].name}</th>
                     <th class="text">${data.info[i].role}</th>
                     <th class="text"><a href="https://mail.google.com/mail/u/0/?fs=1&to=${data.info[i].email}&su=Subject&body=Hello,%20${data.info[i].name}%0a%0a-%0a%0aFrom:%20&tf=cm" target="_blank" rel="noopener noreferrer" class="text">${data.info[i].email}</a></th>
-                    <th class="text"><a href="tel:${data.info[i].phone.replace("+", "").replace(" ", "").replace("-", "").replace("-", "")}">${data.info[i].phone}</th>
+                    <th class="text"><a href="tel:${data.info[i].phone.replace("+", "").replace(" ", "").replace("-", "").replace("-", "")}" class="text"">${data.info[i].phone}</th>
                 </tr>
             `;
         }
