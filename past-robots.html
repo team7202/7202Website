@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title class="title">Past Robots</title>
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
-    <link rel="stylesheet" href="/stylesheets/home.css">
+    <link rel="stylesheet" href="/stylesheets/past-robots.css">
 </head>
 
 <body>
@@ -35,15 +35,18 @@
     </header>
 </body>
 
+<center>
+    <h1 class="welcome"></h1>
+</center>
+
 <script>
     fetch("json/past-robots.json").then(response => response.json()).then(data => {
         document.getElementsByClassName("title")[0].innerHTML = data.title;
-        document.getElementsByClassName("homepage-welcome")[0].innerHTML = data.welcome;
+        document.getElementsByClassName("welcome")[0].innerHTML = data.welcome;
 
-        for (let i = 0; i < data.descriptions.length; i++) {
-            console.log(data.descriptions[i]);
-            document.getElementsByClassName("descriptions")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
-        }
+        // for (let i = 0; i < data.descriptions.length; i++) {
+        //     document.getElementsByClassName("descriptions")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
+        // }
     });
 
     function onButtonClick(page) {

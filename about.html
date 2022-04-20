@@ -34,16 +34,18 @@
             </ul>
         </nav>
     </header>
+
+    <h1 class="welcome"></h1>
 </body>
 
 <script>
     fetch("json/about.json").then(response => response.json()).then(data => {
         document.getElementsByClassName("title")[0].innerHTML = data.title;
-        document.getElementsByClassName("homepage-welcome")[0].innerHTML = data.welcome;
+        document.getElementsByClassName("welcome")[0].innerHTML = data.welcome;
 
         for (let i = 0; i < data.descriptions.length; i++) {
             console.log(data.descriptions[i]);
-            document.getElementsByClassName("descriptions")[0].innerHTML += `<p class="homepage-description">${data.descriptions[i]}</p>`;
+            document.getElementsByClassName("descriptions")[0].innerHTML += `<h1>${data.descriptions[i]}</h1>`;
         }
     });
 
