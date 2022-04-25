@@ -62,7 +62,7 @@ img:hover {
        margin-left: auto;
    }
     
-    h1.homepage-welcome:hover {
+    h1:hover {
         font-size: 4em;
         color: orange;
         margin-right: auto;
