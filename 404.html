@@ -35,7 +35,8 @@
     </header>
 
     <center>
-        <h1>404!</h1>
+<!--         <h1>404!</h1> -->
+        <h1><span>4</span><span>0</span><span>4</span><span>!</span></h1>
         <p class="error"></p>
         <button class="btn" type="submit" onclick="onBackButtonClick()" onmouseover="onButtonHover('btn', 5)" onmouseout="onButtonNotHover('btn', 5)">Back</button>
     </center>
@@ -44,8 +45,10 @@
 <script>
     fetch("/json/404.json").then(response => response.json()).then(data => {
         const index = Math.floor(Math.random() * ((data.messages.length - 1) - 0 + 1) + 0);
-        const randomMessage = data.messages[index]
-        document.getElementsByClassName("error")[0].innerHTML = randomMessage;
+        const randomMessage = data.messages[index];
+        for(const i = 0; i < randomMessage.length; i++) {
+            document.getElementsByClassName("error")[0].innerHTML += `<span>${randomMessage}</span>`;
+        }
     })
     
     function onButtonClick(page) {
