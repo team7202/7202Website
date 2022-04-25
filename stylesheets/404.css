@@ -9,6 +9,7 @@
 
 ::selection {
     background: orangered;
+    font-weight: bolder;
 }
 
 img:hover {
