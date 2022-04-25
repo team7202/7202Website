@@ -46,9 +46,11 @@
     fetch("/json/404.json").then(response => response.json()).then(data => {
         const index = Math.floor(Math.random() * ((data.messages.length - 1) - 0 + 1) + 0);
         const randomMessage = data.messages[index];
+        
         for(const i = 0; i < randomMessage.length; i++) {
-            document.getElementsByClassName("error")[0].innerHTML += `<span>${randomMessage[i]}</span>`;
-            document.getElementsByClassName("error")[1].innerHTML += `<span>${randomMessage[i]}</span>`;
+//             document.getElementsByClassName("error")[0].innerHTML += `<span>${randomMessage[i]}</span>`;
+            document.getElementsByClassName("error")[0].innerHTML += `<span>${i} </span>`;
+            
         }
     })
     
