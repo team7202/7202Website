@@ -47,7 +47,7 @@
         const index = Math.floor(Math.random() * ((data.messages.length - 1) - 0 + 1) + 0);
         const randomMessage = data.messages[index];
         for(const i = 0; i < randomMessage.length; i++) {
-            document.getElementsByClassName("error")[0].innerHTML += `<span>${randomMessage}</span>`;
+            document.getElementsByClassName("error")[0].innerHTML += `<span>${randomMessage[i]}</span>`;
         }
     })
     
