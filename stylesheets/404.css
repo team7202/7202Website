@@ -56,10 +56,18 @@ img:hover {
    }
 
    h1.homepage-welcome {
+       font-size: 2em;
        color: darkorange;
        margin-right: auto;
        margin-left: auto;
    }
+    
+    h1.homepage-welcome:hover {
+        font-size: 4em;
+        color: darkorange;
+        margin-right: auto;
+        margin-left: auto;
+    }
 
    p.homepage-description {
        color: orangered;
